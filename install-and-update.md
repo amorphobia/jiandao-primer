@@ -12,7 +12,7 @@ Windows 中的 Rime 前端推荐中州韵官方开发的[小狼毫](https://gith
 
 > 若已安装的小狼毫版本为 0.14.3 及以下，且未手动更新过 librime，请使用手动安装。
 
-## 使用安装器安装或更新
+## 使用安装器安装或更新 <a href="#use-installer-to-install-and-update" id="use-installer-to-install-and-update"></a>
 
 1. **（仅初次安装时）**前往[中州韵输入法引擎网站](https://rime.im/download/)下载小狼毫并安装
 2. 使用 `Win+R` 打开运行窗口，输入 `powershell` 并回车
@@ -35,7 +35,7 @@ irm 0xa.nl/get-jd-win | iex
 * [https://raw.githubusercontent.com/amorphobia/rime-jiandao/master/scripts/installer.ps1](https://raw.githubusercontent.com/amorphobia/rime-jiandao/master/scripts/installer.ps1)
 {% endhint %}
 
-## 手动安装或更新
+## 手动安装或更新 <a href="#manually-install-and-update" id="manually-install-and-update"></a>
 
 1. **（仅初次安装时）**前往[中州韵输入法引擎网站](https://rime.im/download/)下载小狼毫并安装
 2. 前往键道仓库发布页面（[GitHub](https://github.com/amorphobia/rime-jiandao/releases)，[Gitee](https://gitee.com/amorphobia/rime-jiandao/releases)）下载最新发布的键道压缩包 `jiandao-v<版本号>.zip`
@@ -59,7 +59,7 @@ patch:
 {% tab title="macOS" %}
 macOS 的 Rime 前端推荐中州韵官方开发的[鼠须管](https://github.com/rime/squirrel)。
 
-## 安装或更新
+## 安装或更新 <a href="#manually-install-and-update" id="manually-install-and-update"></a>
 
 1. **（仅初次安装时）**使用 Homebrew 安装鼠须管
 
@@ -85,6 +85,37 @@ TODO
 {% endtab %}
 
 {% tab title="iOS" %}
+iOS 中的 Rime 前端推荐开源软件[仓输入法](https://github.com/amorphobia/Hamster)。
+
+## 安装与更新 <a href="#manually-install-and-update" id="manually-install-and-update"></a>
+
+1. **（仅初次安装时）**_〔在 iOS 设备上〕_使用 App Store 搜索仓输入法，或者点击下面的链接跳转 App Store，安装仓输入法
+
+{% embed url="https://apps.apple.com/cn/app/id6446617683" %}
+点击链接跳转 App Store 下载
+{% endembed %}
+
+2. **（仅初次安装时）**_〔在 iOS 设备上〕_启用仓输入法，并给予网络权限
+
+> 如果倾向于使用键道官方维护的方案，已在仓输入法中内置，可直接选择并忽略以下步骤
+
+2. _〔在电脑上〕_前往键道仓库发布页面（[GitHub](https://github.com/amorphobia/rime-jiandao/releases)，[Gitee](https://gitee.com/amorphobia/rime-jiandao/releases)）下载最新发布的键道压缩包 `jiandao-v<版本号>.zip`
+3. _〔在电脑上〕_将压缩包内全部文件解压到一个临时目录中
+4. **（仅初次安装时）**_〔在电脑上〕_在这个临时目录中新建 `default.custom.yaml` 文件，添加以下内容
+
+```
+patch:
+  schema_list:
+    - schema: jiandao
+```
+
+6. _〔在 iOS 设备上〕_打开仓输入法中的“输入方案上传”功能，_〔在电脑上〕_用浏览器打开相应局域网地址，把临时目录中所有内容上传到 `Rime` 目录中。
+7. _〔在 iOS 设备上〕_点击重新部署
+{% endtab %}
+
+{% tab title="浏览器" %}
+[My RIME](https://my-rime.vercel.app/) 是可以运行在现代浏览器中的 Rime 前端。
+
 TODO
 {% endtab %}
 {% endtabs %}
